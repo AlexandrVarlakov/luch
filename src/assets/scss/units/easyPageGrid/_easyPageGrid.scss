@@ -1,0 +1,86 @@
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: rgba(65, 105, 225, 0.075);
+        
+}
+
+
+/*BEGIN: grid-cells*/
+@for $i from 1 through 12 {
+    .cell-#{$i}{
+        grid-column: span #{$i};
+    }
+}
+
+@for $i from 1 through 12 {
+    @media (max-width: $md){
+        .cell-md-#{$i}{
+            grid-column: span #{$i};
+        }
+    }
+    
+}
+
+@for $i from 1 through 12 {
+    @media (max-width: $sm){
+        .cell-sm-#{$i}{
+            grid-column: span #{$i};
+        }
+    }
+    
+}
+
+@for $i from 1 through 12 {
+    @media (max-width: $vs){
+        .cell-vs-#{$i}{
+            grid-column: span #{$i};
+        }
+    }
+    
+}
+
+
+/*END: grid-cells*/
+
+
+.c-1{
+    background-color: #298;
+    padding: 25px;
+}
+.c-2{
+    background-color: rgb(66, 108, 201);
+    padding: 25px;
+}
+.c-3{
+    background-color: rgb(221, 160, 27);
+    padding: 25px;
+}
+.c-4{
+    background-color: rgb(150, 63, 121);
+    padding: 25px;
+}
+.c-5{
+    background-color: rgb(128, 194, 23);
+    padding: 25px;
+}
+.c-6{
+    background-color: rgb(169, 170, 115);
+    padding: 25px;
+}
+.c-7{
+    background-color: rgb(37, 44, 43);
+    padding: 25px;
+}
+.c-8{background-color: rgb(155, 56, 194);
+    padding: 25px;}
+.c-9{background-color: rgb(198, 218, 21);
+    padding: 25px;}
+.c-10{background-color: rgb(202, 96, 34);
+    padding: 25px;}
+.c-11{background-color: rgb(45, 187, 212);
+    padding: 25px;}
+.c-12{background-color: rgb(71, 30, 6);
+    padding: 25px;}
+    
