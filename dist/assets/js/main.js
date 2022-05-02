@@ -23,7 +23,7 @@ window.onscroll = function () { // отслеживаем скролл
 
 
 // Слайдеры
-const swiper = new Swiper('.offer__slider', {
+const swiperOffers = new Swiper('.offer__slider', {
   slidesPerView: 1,
   speed: 1000,
   spaceBetween: 20,
@@ -94,6 +94,21 @@ const swiper_events__des = new Swiper('.events__des', {
     },
 })
 
+
+let reviewSwiper = new Swiper('.review-swiper', {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  speed: 1000,
+    navigation: {
+      nextEl: '.review-next',
+      prevEl: '.review-prev',
+    },
+  
+    
+})
+
+
+
 const swiper__reviews = new Swiper('.reviews__slider', {
   slidesPerView: "auto",
   spaceBetween: 30,
@@ -107,3 +122,93 @@ const swiper__reviews = new Swiper('.reviews__slider', {
     },
 });
 
+
+const swiperEvents = new Swiper('.swiper-events', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  speed: 1000,
+  grid: {
+    rows: 2,
+  },
+    navigation: {
+      nextEl: '.events-next',
+      prevEl: '.events-prev',
+    },
+    breakpoints: {
+      
+      600: {
+        slidesPerView: 2,
+          grid: {
+              rows: 1,
+          },
+      }
+  },
+});
+
+
+
+
+
+
+let includesSwiper = new Swiper('.includes-swiper', {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  speed: 1000,
+    navigation: {
+      nextEl: '.inc__next',
+      prevEl: '.inc__prev',
+    },
+  
+    breakpoints: {
+      200: {
+        slidesPerView: 1.3,
+        spaceBetween: 20,
+      },
+      400: {
+        slidesPerView: 2,
+        
+      },
+    }
+});
+
+let mapBlock = document.querySelector('#map');
+
+if ( mapBlock ){
+    ymaps.ready(init);
+}
+
+
+
+function init () {
+    // Создание экземпляра карты и его привязка к контейнеру с
+    // заданным id ("map").
+    myMap = new ymaps.Map('map', {
+        // При инициализации карты обязательно нужно указать
+        // её центр и коэффициент масштабирования.
+        center: [55.823333, 37.441224],
+        controls: [],
+        zoom: 16
+    }, {
+        
+    });
+
+    
+
+
+    
+   
+    
+    
+    
+}
+
+
+
+  $('.tooltip').tooltipster({
+    
+    animation: 'fade',
+    delay: 200,
+    theme: 'tooltipster-light',
+    trigger: 'click',
+    side: 'bottom'
+  });
