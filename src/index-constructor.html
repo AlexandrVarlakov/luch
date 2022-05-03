@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="assets/css/tooltipster.bundle.min.css">
+    
+    
+
+
     <link rel="stylesheet" href="assets/css/tooltipster-sideTip-light.min.css">
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a569dd0f-0a26-4cb0-ba68-768310a472d6" type="text/javascript"></script>
@@ -23,7 +27,7 @@
     <main>
         <div class="sub__menu">
             <div class="sub_header">
-                <a href="" class="menu-btn-res"><span class="desc">Забронировать лед</span> <span class="mob">Бронь льда</span></a>
+                <a href="" class="menu-btn-res btn-reserve"><span class="desc">Забронировать лед</span> <span class="mob">Бронь льда</span></a>
                 <div class="menu-close">
     
                 </div>
@@ -34,13 +38,13 @@
             </div>
             
             <nav>
-                <a href="">мы</a>
-                <a href="">возможности </a>
-                <a href="">преимущества</a>
-                <a href="">галерея</a>
-                <a href="">события</a>
-                <a href="">Отзывы</a>
-                <a href="">Контакты</a>
+                <a href="#we">мы</a>
+                <a href="#opportunities" class="menu-link">возможности </a>
+                <a href="#advantages" class="menu-link">преимущества</a>
+                <a href="#gallery" class="menu-link">галерея</a>
+                <a href="#events" class="menu-link">события</a>
+                <a href="#reviews" class="menu-link">Отзывы</a>
+                <a href="#contacts" class="menu-link">Контакты</a>
             </nav>
             <div class="mob__fut">
                 <div class="social">
@@ -63,9 +67,9 @@
             </div>
             <div class="hero__main">
                 <header class="header">
-                    <div class="header__inner">
-                        <a class="des_link" href="#">Забронировать лед</a>
-                        <a class="mob_link" href="#">бронь льда</a>
+                    <div class="header__inner ">
+                        <a class="des_link btn-reserve" href="#">Забронировать лед</a>
+                        <a class="mob_link btn-reserve" href="#">бронь льда</a>
                         <div class="menu"></div>
                         <a href="tel:+74956020232">8 495 602 02 32</a>
                     </div>
@@ -88,11 +92,11 @@
         </section>
     
     
-        <section class="offer">
+        <section class="offer" id="we">
             <div class="offer__inner">
                 <div class="offer__left">
                     <h2 class="h3">Мы предлагаем ледовую площадку для тренировок по хоккею и занятий фигурным катанием</h2>
-                    <button class="btn red">оставить заявку</button>
+                    <button class="btn red btn-contact">оставить заявку</button>
                 </div>
                 <div class="offer__right">
                     <div class="offer__slider swiper">
@@ -328,13 +332,171 @@
             </div>
         </section>
 
-        <section class="s-gallery">
 
+        <section class="s-opportunities" id="opportunities">
+            <img src="assets/img/opp-decor.svg" alt="" class="opp-decor">
+            <img src="assets/img/opportunities-bg.svg" alt="" class="s-opportunities__bg">
+            <div class="s-opportunities__inner">
+
+
+                <h2 class="h1">возможности</h2>
+
+
+                <div class="opp-list">
+                    <div class="opp-list__item">
+                        <div class="opp-list__item--tblock">
+                            <h3 class="h4">заточка <br />коньков</h3>
+                        </div>
+                        <div class="opp-list__item--iblock">
+                            <img src="assets/img/opportunities/1.svg" alt="" class="opp-icon">
+                        </div>
+                    </div>
+                    <div class="opp-list__item">
+                        <div class="opp-list__item--tblock">
+                            <h3 class="h4">кафе</h3>
+                        </div>
+                        <div class="opp-list__item--iblock">
+                            <img src="assets/img/opportunities/2.svg" alt="" class="opp-icon">
+                        </div>
+                    </div>
+                    <div class="opp-list__item">
+                        <div class="opp-list__item--tblock">
+                            <h3 class="h4">Сушилка</h3>
+                        </div>
+                        <div class="opp-list__item--iblock">
+                            <img src="assets/img/opportunities/3.svg" alt="" class="opp-icon">
+                        </div>
+                    </div>
+                    <div class="opp-list__item">
+                        <div class="opp-list__item--tblock">
+                            <h3 class="h4">ПРОВЕДЕНИЕ <br/>МЕРОПРИЯТИЙ</h3>
+                        </div>
+                        <div class="opp-list__item--iblock">
+                            <img src="assets/img/opportunities/4.svg" alt="" class="opp-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section class="s-advantages" id="advantages">
+
+            <img src="assets/img/advantages-decor.svg" alt="" class="advantages-decor">
+
+
+            <img src="assets/img/advantages-bg.svg" alt="" class="s-advantages__bg">
+
+            <div class="s-advantages__inner">
+
+
+                <div class="adv-reserve"> 
+                    <h2 class="h2">забронируйте лед</h2>
+                    <h3 class="adv-reserve__subtitle">прямо сейчас</h3>
+
+                    <button class="btn blue btn-contact">оставить заявку</button>
+                </div>
+
+
+                <div class="adv-block">
+                    <h2 class="h1">наши преимущества</h2>
+
+                    <div class="adv-list">
+                        <div class="adv-list__item">
+                            <h3 class="h5">Высокий <br />потолок</h3>
+
+                            <img src="assets/img/advantages-icons/1.svg" alt="" class="adv-list__icon">
+                        </div>
+                        <div class="adv-list__item">
+                            <h3 class="h5">добро&shyжелательный <br />персонал</h3>
+
+                            <img src="assets/img/advantages-icons/2.svg" alt="" class="adv-list__icon">
+                        </div>
+
+                        <div class="adv-list__item">
+                            <h3 class="h5">даем <br />допинвентарь</h3>
+
+                            <img src="assets/img/advantages-icons/3.svg" alt="" class="adv-list__icon">
+                        </div>
+
+                        <div class="adv-list__item">
+                            <h3 class="h5">раздевалка<br />открывается за час</h3>
+
+                            <img src="assets/img/advantages-icons/4.svg" alt="" class="adv-list__icon">
+                        </div>
+
+                        <div class="adv-list__item">
+                            <h3 class="h5">Парковка <br />рядом</h3>
+
+                            <img src="assets/img/advantages-icons/5.svg" alt="" class="adv-list__icon">
+                        </div>
+
+                        <div class="adv-list__item">
+                            <h3 class="h5">зона спа, <br/>сауна</h3>
+
+                            <img src="assets/img/advantages-icons/6.svg" alt="" class="adv-list__icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="s-gallery" id="gallery">
+            <img src="assets/img/gallery-bg.svg" alt="" class="gallery-bg">
+            <img src="assets/img/gallery-decor.svg" alt="" class="gallery-decor">
+            <div class="s-gallery__title-block">
+                <h2 class="h1">галерея</h2>
+            </div>
+
+            <div class="c-gallery">
+                <div class="luch-gallery swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide luch-gallery__slide">
+                            <img src="assets/img/gallery/1.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide luch-gallery__slide small">
+                            <img src="assets/img/gallery/2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide luch-gallery__slide ">
+                            <img src="assets/img/gallery/3.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide luch-gallery__slide small">
+                            <img src="assets/img/gallery/4.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide luch-gallery__slide small">
+                            <img src="assets/img/gallery/5.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="gallery-navs">
+                        <button class="gallery-prev gallery-btn">
+                            <div></div>    
+                            <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.02979 13.2227H4.52979V10.2227H3.02979L3.02979 13.2227ZM0.700039 10.662C0.114252 11.2478 0.114252 12.1975 0.700039 12.7833L10.246 22.3293C10.8318 22.915 11.7815 22.915 12.3673 22.3293C12.9531 21.7435 12.9531 20.7937 12.3673 20.2079L3.88202 11.7227L12.3673 3.23737C12.9531 2.65159 12.9531 1.70184 12.3673 1.11605C11.7815 0.530268 10.8318 0.530268 10.246 1.11605L0.700039 10.662ZM3.02979 10.2227H1.7607L1.7607 13.2227H3.02979L3.02979 10.2227Z" fill="black"/>
+                            </svg>
+                        </button>
+                        <button class="gallery-next gallery-btn">
+                            <div></div>
+                            <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.7607 10.2227H9.26068V13.2227H10.7607V10.2227ZM13.0904 12.7833C13.6762 12.1975 13.6762 11.2478 13.0904 10.662L3.54449 1.11605C2.9587 0.530268 2.00895 0.530268 1.42317 1.11605C0.837379 1.70184 0.837379 2.65159 1.42317 3.23737L9.90845 11.7227L1.42317 20.2079C0.837379 20.7937 0.837379 21.7435 1.42317 22.3293C2.00895 22.915 2.9587 22.915 3.54449 22.3293L13.0904 12.7833ZM10.7607 13.2227H12.0298V10.2227H10.7607V13.2227Z" fill="black"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
         
 
 
-        <section class="s-events">
+        <section class="s-events" id="events">
             <div class="s-events__inner">
                 <h2 class="h1">события</h2>
 
@@ -403,7 +565,7 @@
 
 
         
-        <section class="s-reviews">
+        <section class="s-reviews" id="reviews">
             <img src="assets/img/reviews-bg.svg" alt="" class="reviews-bg">
             <img src="assets/img/review-decor.svg" alt="" class="review-decor">
 
@@ -478,7 +640,7 @@
         </section>
 
 
-        <section class="s-contacts">
+        <section class="s-contacts" id="contacts">
             <img src="assets/img/contacts-decor.svg" alt="" class="contacts-decor">
 
 
@@ -512,7 +674,7 @@
                 <div class="pre-footer__content">
                     <h2 class="h2">Остались вопросы?</h2>
                     <h3 class="h4">свяжитесь с нами</h3>
-                    <button class="btn blue">оставить заявку</button>
+                    <button class="btn blue btn-contact">оставить заявку</button>
                 </div>
             </div>
         </section>
@@ -552,14 +714,80 @@
     </main>
 
     
+    <div class="modal modal-reserve">
+        <div class="modal__close">
+            
+        </div>
 
+        <h3 class="h3 modal-title">Бронирование</h3>
 
-    
+        <form  class="grid-form reserve-form">
+            <div class="grid-form__input-wrap">
+                <input type="text" class="grid-form__input text" placeholder="Имя" name="name" required>
+            </div>
+            <div class="grid-form__input-wrap">
+                <input type="text" class="grid-form__input text" placeholder="Телефон" name="phone" required minlength="16">
+            </div>
+
+            <div class="grid-form__input-wrap-fl">
+                <div class="datetimepicker">
+                    <input type="date" id="date" value="now" class="text" name="date" required>
+                    <span></span>
+                    <input type="time" id="time" value="08:00" class="text" name="time" required>
+                </div>
+                
+            </div>
+
+            <div class="grid-form__input-wrap-fl">
+                <input type="text" class="grid-form__input text" placeholder="Комментарий" name="msg">
+            </div>
+
+            <div class="grid-form__input-wrap-fl">
+                <p class="grid-form__info">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности.</p>
+            </div>
+
+            <div class="grid-form__input-wrap-fl">
+                <button class="btn blue btn-form">Отправить</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal modal-contact">
+        <div class="modal__close">
+            
+        </div>
+
+        <h3 class="h3 modal-title">Связаться с нами</h3>
+
+        <form  class="grid-form contact-form">
+            <div class="grid-form__input-wrap">
+                <input type="text" class="grid-form__input text" placeholder="Имя" name="name" required>
+            </div>
+            <div class="grid-form__input-wrap">
+                <input type="text" class="grid-form__input text" placeholder="Телефон" name="phone" required minlength="16">
+            </div>
+
+            <div class="grid-form__input-wrap-fl">
+                <input type="text" class="grid-form__input text" placeholder="Комментарий" name="msg">
+            </div>
+
+            <div class="grid-form__input-wrap-fl">
+                <p class="grid-form__info">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности.</p>
+            </div>
+
+            <div class="grid-form__input-wrap-fl">
+                <button class="btn blue btn-form">Отправить</button>
+            </div>
+        </form>
+    </div>
     
 
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/tooltipster.bundle.min.js"></script>
+    <script src="assets/js/easyModal.js"></script>
+    <script src="assets/js/imask.js"></script>
+
     
     <script src ="assets/js/main.js"></script>
     

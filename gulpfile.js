@@ -8,7 +8,7 @@ const path = {
         js: src_f +   '/assets/js/*.js',
         fonts: src_f +   '/assets/fonts/**/*.*',
         img: src_f + '/assets/img/**/*.*',
-        sound: src_f + '/assets/sound/**/*.*'
+        minCss: src_f + '/assets/scss/*.css'
     }, 
 
     build: {
@@ -17,7 +17,7 @@ const path = {
         js: dist_f +   '/assets/js/',
         fonts: dist_f +   '/assets/fonts/',
         img: dist_f + '/assets/img/',
-        sound: dist_f + '/assets/sound/'
+        minCss: dist_f + '/assets/css/'
     },
 
     watch: {
@@ -26,7 +26,7 @@ const path = {
         js: src_f +   '/assets/js/**/*.js',
         fonts: src_f +   '/assets/fonts/**/*.*',
         img: src_f + '/assets/img/*.*',
-        sound: src_f + '/assets/sound/*.*'
+        minCss: src_f + '/assets/css/*.*'
     }
 }
 
@@ -83,9 +83,9 @@ function img(){
         .pipe(dest(path.build.img))
         
 }
-function sound(){
-    return src(path.src.sound)
-        .pipe(dest(path.build.sound))
+function minCss(){
+    return src(path.src.minCss)
+        .pipe(dest(path.build.minCss))
         
 }
 
@@ -100,7 +100,7 @@ function watching(){
     gulp.watch([path.watch.js], js);
 }
 
-let build = gulp.series(delete_dist, html, css, js, fonts, img, sound);
+let build = gulp.series(delete_dist, html, css, js, fonts, img, minCss);
 let watch = gulp.parallel(build, watching, browser_sync);
 
 exports.watch = watch;

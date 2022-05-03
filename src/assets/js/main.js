@@ -4,10 +4,12 @@ $('.menu').click(function(){
   $('body').css('overflow','hidden');
 
 });
-
+function closeMenu(){
+    $('.sub__menu').css('transform','translateY(-120%)');
+    $('body').css('overflow','visible');
+}
 $('.menu-close').click(function(){
-  $('.sub__menu').css('transform','translateY(-120%)');
-  $('body').css('overflow','visible');
+  closeMenu();
 
 });
 
@@ -123,6 +125,33 @@ const swiper__reviews = new Swiper('.reviews__slider', {
 });
 
 
+const luchGallery = new Swiper('.luch-gallery', {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  speed: 1000,
+
+  breakpoints: {
+      
+    768: {
+      spaceBetween: 20,
+    },
+  },
+
+
+
+    navigation: {
+      nextEl: '.gallery-next',
+      prevEl: '.gallery-prev',
+    },
+  
+    
+});
+
+
+
+
+
+
 const swiperEvents = new Swiper('.swiper-events', {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -212,3 +241,149 @@ function init () {
     trigger: 'click',
     side: 'bottom'
   });
+
+
+
+  let options = {
+    //zIndex: 1000, 
+    //background: 'rgba(12, 130, 121, 0.5)', 
+    //displayFog: 'block', //Значение по умолчанию flex
+    //displayModal: 'flex', //Значение по умолчанию block
+    showModalAnimationName: 'fadeInBottom', 
+    closeModalAnimationName: 'fadeOutTop', 
+    closeClasses: ['modal__close'], 
+    //closeModalOnFogClick: false, 
+    showModalAnimationDuration: 800,
+    //closeModalAnimationDuration: 300,
+    showFogAnimationName: 'fadeIn',
+    closeFogAnimationName: 'fadeOut',
+    showFogAnimationDuration: 300,
+    closeFogAnimationDuration: 300,
+
+    documentScrolled: false, 
+    //onModalClose: function(){console.log('modal close');},
+    //onModalOpen: function(){console.log('modal open');}
+
+}
+
+let btnsReserve = document.querySelectorAll('.btn-reserve');
+
+
+btnsReserve.forEach(  (btn) => {
+  btn.onclick = function(event){
+    event.preventDefault();
+    
+    closeMenu();
+
+    let modal = new easyModal('modal-reserve', options);
+  }
+} )
+
+let btnsContact = document.querySelectorAll('.btn-contact');
+
+btnsContact.forEach(  (btn) => {
+  btn.onclick = function(event){
+    event.preventDefault();
+    
+    closeMenu();
+
+    let modal = new easyModal('modal-contact', options);
+  }
+} )
+
+let menuLinks = document.querySelectorAll('.menu-link');
+
+menuLinks.forEach( (link) => {
+  link.onclick = function(){
+    closeMenu();
+  }
+})
+
+
+
+var dateEl = document.getElementById('date');
+var timeEl = document.getElementById('time');
+
+//document.getElementById('date-output').innerHTML = dateEl.type === 'date';
+//document.getElementById('time-output').innerHTML = timeEl.type === 'time';
+
+let reservForm = document.querySelector('.reserve-form');
+
+reservForm.onsubmit = function(event){
+  event.preventDefault();
+  
+  let data_body = "name=" +  this.querySelector('input[name="name"]').value;
+  data_body = data_body + "phone=" +  this.querySelector('input[name="phone"]').value;
+  data_body = data_body + "&date=" +  this.querySelector('input[name="date"]').value;
+  data_body = data_body + "&time=" +  this.querySelector('input[name="time"]').value;
+  data_body = data_body + "&msg=" +  this.querySelector('input[name="time"]').value;
+
+  fetch("your-script-name.php", { 
+    method: "POST",
+    body: data_body,   
+    headers:{"content-type": "application/x-www-form-urlencoded"} 
+    })
+    
+  
+  
+
+
+  .then( (response) => {
+          if (response.status !== 200) {           
+              return Promise.reject();
+              
+          }   
+        
+          location.href = '/thanks.html'
+          
+          return response.text()
+    })
+    .then(i => console.log(i))
+    .catch(() => console.log('ошибка'));
+}
+
+
+let contactForm = document.querySelector('.contact-form');
+
+contactForm.onsubmit = function(event){
+  event.preventDefault();
+  
+  let data_body = "name=" +  this.querySelector('input[name="name"]').value;
+  data_body = data_body + "phone=" +  this.querySelector('input[name="phone"]').value;
+  data_body = data_body + "&msg=" +  this.querySelector('input[name="time"]').value;
+
+  fetch("your-script-name.php", { 
+    method: "POST",
+    body: data_body,   
+    headers:{"content-type": "application/x-www-form-urlencoded"} 
+    })
+    
+  
+  
+
+
+  .then( (response) => {
+          if (response.status !== 200) {           
+              return Promise.reject();
+              
+          }   
+        
+          location.href = '/thanks.html'
+          
+          return response.text()
+    })
+    .then(i => console.log(i))
+    .catch(() => console.log('ошибка'));
+}
+
+
+
+
+let phoneMasks = document.querySelectorAll("input[name='phone']");
+
+phoneMasks.forEach( (input) => {
+    IMask(
+        input, {
+          mask: '+{7}(000)000-00-00'
+      });
+})
