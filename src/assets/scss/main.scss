@@ -5059,6 +5059,7 @@ nav a:last-child {
 
   @media (max-width: 600px){
     margin-top: 28px;
+    grid-gap: 10px 13px;
   }
 }
 
@@ -5076,6 +5077,10 @@ nav a:last-child {
 
   .h4{
     color: #E0013F;
+
+    @media (max-width: 600px){
+      padding-left: 4px;
+    }
   }
 
   @media (max-width: 1024px){

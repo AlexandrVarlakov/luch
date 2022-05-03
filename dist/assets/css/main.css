@@ -4873,7 +4873,8 @@ nav a:last-child {
       grid-gap: 15px; } }
   @media (max-width: 600px) {
     .opp-list {
-      margin-top: 28px; } }
+      margin-top: 28px;
+      grid-gap: 10px 13px; } }
 
 .opp-list__item {
   width: 15.104166vw;
@@ -4897,6 +4898,9 @@ nav a:last-child {
   min-height: 185px; }
   .opp-list__item .h4 {
     color: #E0013F; }
+    @media (max-width: 600px) {
+      .opp-list__item .h4 {
+        padding-left: 4px; } }
   @media (max-width: 1024px) {
     .opp-list__item {
       padding: 16px 14px 25px 22px; } }
